@@ -1,0 +1,142 @@
+/* watch.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0b;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.watch-page {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f97316;
+}
+
+.nav-icons .icon-btn,
+.nav-icons .lang-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.breadcrumb {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.breadcrumb a {
+  color: #f97316;
+  text-decoration: none;
+}
+
+.video-player {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-bottom: 1rem;
+}
+
+.video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover,
+.controls button.active {
+  background-color: #f97316;
+}
+
+.episode-list h2 {
+  margin-bottom: 0.5rem;
+}
+
+.episode-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 8px;
+  padding: 0;
+}
+
+.episode-list li {
+  list-style: none;
+  background: #111;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.episode-list li.active,
+.episode-list li:hover {
+  background-color: #f97316;
+  color: white;
+}
+
+.episode-info {
+  margin-bottom: 1rem;
+}
+
+.auto-next-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f97316;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
